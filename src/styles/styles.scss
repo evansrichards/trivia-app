@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+body {
+  background: $background;
+  color: $white;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 25px 0;
+  height: 100%;
+  width: 320px;
+}
+
+.banner { padding: 50px 0 0; }
+.banner a { text-decoration: none; }
+
+.result-list { padding-top: 15px; }
+
+.result {
+  border-top-color: $border;
+  border-top-style: solid;
+  border-top-width: 1px;
+  padding: 12px 0;
+}
+
+.result-row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.result-row p:nth-child(2) {
+  margin-left: 7px;
+}
+
+.correct, .correct p { color: $green; }
+.incorrect, .incorrect p { color: $red; }

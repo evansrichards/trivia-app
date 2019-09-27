@@ -1,0 +1,39 @@
+/* Text component stylesheet */
+
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+@import '../../styles/variables.scss';
+
+%text-base {
+    color: $black;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    padding: .3em 0;
+}
+
+%text-bold {
+    font-weight: 700;
+}
+
+
+.title {
+    @extend %text-base;
+    font-size: $text-huge;
+    font-weight: 700;
+}
+
+.heading {
+    @extend %text-base;
+    font-size: $text-large;
+    font-weight: 700;
+}
+
+.subheading {
+    @extend %text-base;
+    font-size: $text-medium;
+    font-weight: 700;
+}
+
+.paragraph {
+    @extend %text-base;
+    font-size: $text-small;
+}

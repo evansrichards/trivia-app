@@ -1,0 +1,23 @@
+/* Card component stylesheet */
+
+@import '../../styles/variables.scss';
+
+.card {
+    -ms-flex-direction: column;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    background-clip: border-box;
+    background-color: $white;
+    border-radius: .2rem;
+    border: 1px solid $border;
+    border-top-color: $blue;
+    border-top-width: 3px;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 200px;
+    padding: 15px;
+    position: relative;
+    word-wrap: break-word;
+}

@@ -1,0 +1,28 @@
+/* Button component stylesheet */
+
+@import '../../styles/variables.scss';
+
+.button {
+    background-color: $white;
+    border-radius: .2rem;
+    border: 1.2px solid $blue;
+    color: $blue;
+    cursor: pointer;
+    font-size: $text-small;
+    font-weight: 700;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    width: 100%;
+}
+    .button:focus {outline:0;}
+    .button:hover:not([disabled]) {
+        background-color: $blue;
+        color: $white;
+    }
+    .button:active:not([disabled]) {
+        background-color: darken($blue, 5%);
+    }

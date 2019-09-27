@@ -1,0 +1,18 @@
+/* Bar component stylesheet */
+
+.bar {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+    .bar button:first-child {
+        margin-right: 2px;
+    }
+
+    .bar button:last-child {
+        margin-left: 2px;
+    }
