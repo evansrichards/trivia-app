@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-https://trivia-app-9f3da.web.app/(https://trivia-app-9f3da.web.app/)
+https://trivia-app-9f3da.web.app/
 
 ## Available Scripts
 
