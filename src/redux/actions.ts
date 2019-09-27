@@ -36,23 +36,27 @@ export const startGame = () => ({ type: ActionTypes.START_GAME });
 export const fetchQuestions = () => {
     const questions: Question[] = [];
     return (dispatch: Dispatch<any>) => {
-        axios.get('https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean')
-        .then((res: any) => {
-            res.data.results.forEach((q: any, i: number) => {
-                questions.push({
-                    questionID: i.toString(),
-                    category: q.category,
-                    type: q.type,
-                    question: q.question ? q.question
-                        // eslint-disable-next-line
-                        .replace(/&quot;/g, '\"')
-                        .replace(/&#039;/g, '\'') : undefined,
-                    difficulty: q.difficulty,
-                    correctAnswer: q.correct_answer === "True",
-                    incorrectAnswers: q.incorrect_answers
+        try {
+            axios.get('https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean')
+            .then((res: any) => {
+                res.data.results.forEach((q: any, i: number) => {
+                    questions.push({
+                        questionID: i.toString(),
+                        category: q.category,
+                        type: q.type,
+                        question: q.question ? q.question
+                            // eslint-disable-next-line
+                            .replace(/&quot;/g, '\"')
+                            .replace(/&#039;/g, '\'') : undefined,
+                        difficulty: q.difficulty,
+                        correctAnswer: q.correct_answer === "True",
+                        incorrectAnswers: q.incorrect_answers
+                    });
                 });
+                dispatch(setQuestions(questions));
             });
-            dispatch(setQuestions(questions));
-        });
+        } catch (e) {
+            console.log(e);
+        }
     };
 }

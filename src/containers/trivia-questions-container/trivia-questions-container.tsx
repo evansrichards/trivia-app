@@ -21,9 +21,6 @@ export class TriviaQuestionsView extends React.Component<Props> {
     constructor(props: Props) {
         super(props);
         this.answerQuestion = this.answerQuestion.bind(this);
-    }
-
-    componentWillMount() {
         this.props.fetchQuestions();
         this.props.startGame();
     }
